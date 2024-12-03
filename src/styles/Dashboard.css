@@ -1,0 +1,39 @@
+.dashboard-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stat-card {
+    background-color: var(--secondary-background);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.logout-btn {
+    margin-top: 1rem;
+    width: 100%;
+}

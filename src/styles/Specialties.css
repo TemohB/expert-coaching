@@ -1,0 +1,85 @@
+.specialties-page {
+    padding: 100px 20px 60px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.specialties-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.specialties-header h1 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.specialties-header p {
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.specialties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.specialty-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialty-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.specialty-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.specialty-card p {
+    color: var(--color-dark);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.benefits-list li {
+    color: var(--color-dark);
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .specialties-page {
+        padding: 80px 15px 40px;
+    }
+
+    .specialties-header h1 {
+        font-size: 2rem;
+    }
+}

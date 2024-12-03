@@ -1,0 +1,186 @@
+/* Hero.css */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(15, 76, 92, 0.9), rgba(44, 62, 80, 0.9));
+}
+
+/* Overlay et fond */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/hero-bg.jpg') center/cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Contenu principal */
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-white);
+    line-height: 1.2;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* Bouton CTA */
+.hero-cta {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.hero-cta .btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Section des caractéristiques */
+.hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    animation: fadeInUp 1s ease-out 0.9s forwards;
+    opacity: 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+.feature-text {
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effet de parallaxe sur le fond */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, 
+        rgba(23, 183, 148, 0.1) 0%,
+        rgba(15, 76, 92, 0.2) 100%);
+    z-index: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-cta .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Effet de survol sur les caractéristiques */
+.feature {
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+/* Animation du gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero {
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite;
+}
